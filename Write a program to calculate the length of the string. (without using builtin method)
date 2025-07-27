@@ -1,0 +1,18 @@
+// Write a program to calculate the length of the string. (without using builtin method) 
+#include<stdio.h>
+#include<conio.h>
+
+    void main()
+{
+        char str[20],lenght=0;
+        int i;
+        printf("Enter a string ");
+        fgets(str,20,stdin);
+        for (i = 0; i < 20; i++)
+          if (str[i]==0)
+           break;
+          
+        printf("Lenght of string %d",i-1);
+   
+    getch();
+}
