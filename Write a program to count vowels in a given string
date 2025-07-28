@@ -1,0 +1,23 @@
+// Write a program to count vowels in a given string 
+#include<stdio.h>
+#include<conio.h>
+
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+
+    void main()
+{
+        char ch[40];
+        int count=0;
+    printf("Enter a string\n");
+    fgets(ch,40,stdin);
+    strlwr(ch);
+    for (int i = 0; ch[i]; i++)
+     if (ch[i]=='a' || ch[i]=='e' || ch[i]=='i' || ch[i]=='o' || ch[i]=='u' )
+        count++;
+    
+    printf("Number of vowel in given string %d",count);
+        
+    getch();
+}
