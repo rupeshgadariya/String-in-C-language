@@ -1,0 +1,26 @@
+// Write a program to reverse a string. 
+#include<stdio.h>
+#include<conio.h>
+
+    void main()
+{  
+    char ch[40], rev[40];
+    int i,j;
+   printf("Enter a string ");
+   fgets(ch,40,stdin);
+     
+     for( i=0; i<40; i++)
+      if(ch[i]==0)
+        break;
+   i=i-2;
+    for( j=0; j<40; j++)
+     {
+            rev[j]= ch[i];
+        if(i==0) break;
+        i--;
+     }  rev[j+1]='\0';
+
+    printf("%s",rev);
+            
+    getch();
+}
