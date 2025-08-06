@@ -1,0 +1,25 @@
+/*  Write a program in C to count the total number of alphabets, digits and special
+  characters in a string.   */
+  #include<stdio.h>
+  #include<conio.h>
+  
+    void main()
+{
+        char ch[50];
+        int digit=0,alphabets=0,sp_character=0;
+
+        printf("Enter anything\n");
+        fgets(ch,50,stdin);
+
+        for(int i=0;ch[i];i++)
+        if(ch[i]>='A' && ch[i]<='Z')
+                alphabets++;
+        else if(ch[i]>='a' && ch[i]<='z')
+                alphabets++;
+        else if(ch[i]>='0' && ch[i]<='9')
+                digit++;
+        else sp_character++;
+printf("%d digit, %d alphabets, %d special character ",digit,alphabets,sp_character-1);
+    printf("\n Present in given sentence");
+    getch();
+}
