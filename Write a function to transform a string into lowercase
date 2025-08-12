@@ -1,0 +1,25 @@
+// Write a function to transform a string into lowercase
+#include<stdio.h>
+#include<conio.h>
+
+
+    void upp( char str[], int n)
+{
+    for (int i = 0; i < n; i++)
+      {
+        if( str[i]>='A' && str[i]<='Z' )
+        str[i] = str[i]+32;
+       if( str[i]==0 )
+          break;
+       }
+       
+    }
+
+    int main()
+    {
+        char ab[20]="I am RUPESH KUMAR";
+        printf("%s\n",ab);
+        upp(ab,20);
+        printf("%s\n",ab);
+
+    }
