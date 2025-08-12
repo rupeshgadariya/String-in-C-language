@@ -1,0 +1,26 @@
+// Write a function to count vowels in a given string. 
+#include<stdio.h>
+#include<conio.h>
+
+    int vowel(char str[], int n)
+{
+        int count=0;
+        char check[]="AEIOUaeiou";
+    for(int i=0; i<n; i++ )
+     {
+        for(int j=0; j<10; j++ )
+          if (str[i]==check[j])
+           {
+             count++;
+             break; 
+            }
+        if(str[i]==0) break;
+     }
+      return count;
+} 
+
+int main()
+{
+    char ab[]="I am RupEsh kumar";
+    printf("%d",vowel(ab,20));
+}
