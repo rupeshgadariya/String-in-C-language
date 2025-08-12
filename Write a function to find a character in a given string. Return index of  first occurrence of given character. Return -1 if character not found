@@ -1,0 +1,29 @@
+/*  Write a function to find a character in a given string. Return index of 
+  first occurrence of given character. Return -1 if character not found */
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+ int same(char str[], int n, char ch)
+ {
+    int i;
+    char cpy[n];
+    strcpy(cpy,str);
+     if( ch>='A' && ch<='Z' )
+      strupr(cpy);
+     else 
+      strlwr(cpy);
+    for ( i = 0; i < n; i++)
+    {
+        if(ch==cpy[i])
+        return i;
+        if( cpy[i]==0 )
+        return -1;
+     }
+      return -1;
+    
+ }
+int main()
+{
+    char k='S', rk[]="rupESH";
+    printf("%d",same(rk,20,k));
+}
