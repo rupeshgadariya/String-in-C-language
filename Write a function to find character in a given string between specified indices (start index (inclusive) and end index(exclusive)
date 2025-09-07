@@ -1,0 +1,24 @@
+/*  Write a function to find character in a given string between specified
+  indices (start index (inclusive) and end index(exclusive) */
+#include<stdio.h>
+#include<conio.h>
+
+    int find( char ch, char str[], int x, int y)
+{
+
+    
+        for (int i =x; i < y; i++)
+         if(ch==str[i])
+           return 1;
+
+      return 0;
+
+}
+
+int main()
+{
+    char ch='r',str[20]="My name is rupesh";
+
+    printf("%d",find(ch,str,0,10));
+
+}
