@@ -1,0 +1,19 @@
+// Write a function to swap two characters of a given string with specified indices. 
+#include<stdio.h>
+#include<conio.h>
+
+    void swap( char str[], int x, int y)
+{
+   char temp;
+
+    temp = str[x];
+    str[x] = str[y];
+    str[y] = temp;
+}
+
+ int main()
+ {
+    char string[50]="my Multiplus value in string";
+    swap(string,0,3);
+    printf("%s",string);
+ }  
