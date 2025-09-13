@@ -1,0 +1,41 @@
+// Write a program to sort 10 city names stored in two dimensional arrays, taken from the user
+ #include<stdio.h>
+ #include<string.h>  
+    void sort(char str[][30], int x)
+    {
+        char temp[30];
+        for(int j=0; j<9; j++)
+         for (int i = 0; i < 9-j; i++)
+           if (str[i][0]>str[i+1][0])
+            {
+               strcpy(temp, str[i]);
+               strcpy(str[i], str[i+1]);
+               strcpy(str[i+1], temp);
+            }
+         
+    }
+
+
+    int main()
+ {
+    char str[10][30];
+  printf("Enter 10 city name\n");
+    for (int i = 0; i < 10; i++)
+     {
+        fgets(str[i], 30, stdin);
+        fflush(stdin);
+        if (str[i][0]>='a' && str[i][0]<='z')
+         str[i][0]=str[i][0]-32;
+     }
+
+         sort(str, 10);
+
+printf("sort string");
+
+    for (int i = 0; i < 10; i++)
+         printf("%s",str[i]);
+         
+ 
+        
+    return 0;
+ }
